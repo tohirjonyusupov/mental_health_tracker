@@ -1,0 +1,28 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# .env faylini chetlab o'ting (API kalitlari, maxfiy ma'lumotlar)
+.env
+
+# Build fayllari
+dist/
+build/
+
+# log fayllari
+logs/
+*.log
+
+# OS bilan bog'liq fayllar (Windows, Mac)
+.DS_Store
+Thumbs.db
+
+# IDElar va editorlar uchun fayllar (VSCode, JetBrains)
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# OS'ga tegishli vaqtinchalik fayllar
+*~
