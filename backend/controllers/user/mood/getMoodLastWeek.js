@@ -1,4 +1,4 @@
-const pool = require("../../config/db");
+const pool = require("../../../config/db");
 
 exports.getMoodLastWeek = async (req, res) => {
   const userId = req.user.id;

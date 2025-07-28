@@ -1,4 +1,4 @@
-const pool = require("../../config/db");
+const pool = require("../../../config/db");
 
 exports.getAllMoods = async (req, res) => {
   try {
