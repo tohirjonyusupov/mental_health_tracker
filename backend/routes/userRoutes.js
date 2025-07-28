@@ -10,6 +10,7 @@ const { getJournalById } = require("../controllers/user/journal/getJournalById")
 const { createJournal } = require("../controllers/user/journal/createJournal")
 const { deleteJournal } = require("../controllers/user/journal/deleteJournal")
 const { createMood } = require("../controllers/user/mood/createMood")
+const { getRandomMotivation } = require("../controllers/user/motivations")
 const userRoutes = express.Router()
 
 // Mood apis
@@ -24,5 +25,8 @@ userRoutes.get("/journal", verifyToken, getJournals);
 userRoutes.get("/journal/:id", verifyToken, getJournalById);
 userRoutes.post("/journal", verifyToken, createJournal);
 userRoutes.delete("/journal/:id", verifyToken, deleteJournal);
+
+// Motivation apis
+userRoutes.get("/motivation/random", verifyToken, getRandomMotivation);
 
 module.exports = userRoutes
