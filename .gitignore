@@ -4,7 +4,7 @@ npm-debug.log
 yarn-error.log
 
 # .env faylini chetlab o'ting (API kalitlari, maxfiy ma'lumotlar)
-.env
+backend/.env
 
 # Build fayllari
 dist/
