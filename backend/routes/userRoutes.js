@@ -14,4 +14,10 @@ userRoutes.get('/mood/latest', verifyToken, getLatestMood);
 userRoutes.get('/mood/week', verifyToken, getMoodLastWeek);
 userRoutes.delete('/mood/:id', verifyToken, deleteMood);
 
+// Journal apis
+userRoutes.get("/", getJournals);
+userRoutes.get("/:id", getJournalById);
+userRoutes.post("/", createJournal);
+userRoutes.delete("/:id", deleteJournal);
+
 module.exports = userRoutes
