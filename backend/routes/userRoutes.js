@@ -11,7 +11,10 @@ const { createJournal } = require("../controllers/user/journal/createJournal")
 const { deleteJournal } = require("../controllers/user/journal/deleteJournal")
 const { createMood } = require("../controllers/user/mood/createMood")
 const { getRandomMotivation } = require("../controllers/user/motivations")
+const { ask } = require("../controllers/user/chat/ask")
 const userRoutes = express.Router()
+
+
 
 // Mood apis
 userRoutes.post("/mood", verifyToken, createMood)
@@ -28,5 +31,8 @@ userRoutes.delete("/journal/:id", verifyToken, deleteJournal);
 
 // Motivation apis
 userRoutes.get("/motivation/random", verifyToken, getRandomMotivation);
+
+// OpenAi apis
+userRoutes.post("/ask", verifyToken, ask)
 
 module.exports = userRoutes
